@@ -1,0 +1,150 @@
+$primaryColor: #212529;
+
+@mixin box-shadow {
+    box-shadow: rgba($color: #000000, $alpha: 0.25) 0px 2px 5px -1px,
+        rgba($color: #000000, $alpha: 0.3) 0px 1px 3px -1px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    .navbar-brand {
+        font-family: 'Satisfy', cursive;
+    }
+
+    &.custom-shadow {
+        transition: .5s all ease;
+    }
+
+    .navbar-toggler {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.post {
+    .writer {
+        .img-writer {
+            width: 25px;
+            height: 25px;
+        }
+
+        .writer-name {
+            font-size: 12px;
+            color: $primaryColor;
+        }
+    }
+
+    .img-container {
+        position: relative;
+
+        .post-tag {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            padding: .5em 1.5em;
+            background-color: white;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
+}
+
+.tags {
+    a {
+        transition: .5s all ease;
+
+        &:hover {
+            @include box-shadow();
+        }
+    }
+}
+
+footer {
+    padding-top: 3em;
+    padding-bottom: 1em;
+
+    .links {
+        display: block;
+
+        a {
+            color: $primaryColor;
+        }
+    }
+}
+
+section.single-post {
+    .img-writer {
+        width: 70px;
+        height: 70px;
+    }
+
+    .comments {
+        .img-commentator {
+            width: 50px;
+            height: 50px;
+        }
+
+        .replier {
+            margin-left: 65px;
+        }
+    }
+}
+
+section.auth {
+    height: 100vh;
+}
+
+.logo {
+    font-family: 'Satisfy', cursive;
+}
+
+.newsletter {
+    position: relative;
+
+    .close-button {
+        position: absolute;
+        top: 5px;
+        color: $primaryColor;
+        right: 10px;
+    }
+}
+
+.custom-shadow {
+    @include box-shadow();
+}
+
+.custom-card {
+    border-radius: 15px;
+}
+
+.form-control {
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        border: 2px solid $primaryColor;
+    }
+}
+
+// Desktop Version
+@media (min-width: 768px) {
+    footer {
+        .links {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
