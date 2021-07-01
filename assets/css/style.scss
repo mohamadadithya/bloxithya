@@ -13,6 +13,7 @@ body {
 img {
     width: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 a {
@@ -92,6 +93,11 @@ section.single-post {
         height: 70px;
     }
 
+    .img-post {
+        min-height: 240px;
+        max-height: 330px;
+    }
+
     .comments {
         .img-commentator {
             width: 50px;
@@ -132,6 +138,8 @@ section.auth {
 }
 
 .form-control {
+    border-width: 2px;
+
     &:focus {
         box-shadow: none;
         outline: none;

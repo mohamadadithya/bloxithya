@@ -7,6 +7,8 @@ img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 a {
@@ -79,6 +81,11 @@ section.single-post .img-writer {
   height: 70px;
 }
 
+section.single-post .img-post {
+  min-height: 240px;
+  max-height: 330px;
+}
+
 section.single-post .comments .img-commentator {
   width: 50px;
   height: 50px;
@@ -114,6 +121,10 @@ section.auth {
 
 .custom-card {
   border-radius: 15px;
+}
+
+.form-control {
+  border-width: 2px;
 }
 
 .form-control:focus {
