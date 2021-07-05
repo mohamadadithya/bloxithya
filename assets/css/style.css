@@ -99,6 +99,10 @@ section.auth {
   height: 100vh;
 }
 
+section.hero {
+  height: 55vh;
+}
+
 .logo {
   font-family: 'Satisfy', cursive;
 }
